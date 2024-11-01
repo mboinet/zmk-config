@@ -24,7 +24,7 @@ Dans cette configuration, voici les correspondances de doigts utilisés :
 - les _index_ pour la touche *contrôle*
 ** Calques
 
-Pour le moment, il y a deux calques.
+Voici les calques ou layers définis dans cette configuration
 
 *** Par défaut
 
