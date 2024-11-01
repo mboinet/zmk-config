@@ -1,0 +1,24 @@
+* Ma configuration ZMK pour Ferris Sweep
+
+Ceci est un dépôt pour une configuration de clavier Ferris Sweep.
+
+Buts :
+
+- pour taper en français et en anglais
+- pour une utilisation quotidienne d’[[https://www.gnu.org/s/emacs/][Emacs]] et de la console
+- pour un clavier [[https://github.com/davidphilipbarr/Sweep][Ferris Sweep]]
+- avec un micro-contrôleur compatible avec [[https://nicekeyboards.com/nice-nano/][nice!nano]] 2
+- pour utiliser la disposition [[https://ergol.org/][Ergo-L]]
+- en s’inspirant d’[[https://github.com/OneDeadKey/arsenik][Arsenik]]
+
+* Détails
+
+** Modificateurs sur les touches de repos
+
+Pour une introduction au sujet, voici un article de référence sur le sujet : https://precondition.github.io/home-row-mods
+
+Dans cette configuration, voici les correspondances de doigts utilisés :
+- les _auriculaires_ pour la touche *méta*
+- les _annulaires_ pour la touche *alt*
+- les _majeurs_ pour la touche *majuscule*
+- les _index_ pour la touche *contrôle*
