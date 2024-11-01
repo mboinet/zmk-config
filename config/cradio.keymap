@@ -65,7 +65,7 @@
             &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP    &kp PSCRN &kp PAUSE_BREAK &kp SLCK  &trans  &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │OUTPUT TGL│
-           HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN       &DEL     HRMR(K_CUT, K_COPY,    K_PASTE,   OUT_TOG)
+           HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE,   OUT_TOG)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  vol-    │  mute    │  vol+    │          │   │BT PROF 0 │ BT next  │ BT clear │          │BOOTLOADER|
          &bootloader &kp K_VOL_DN &kp K_MUTE &kp K_VOL_UP &trans     &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR  &trans   &bootloader
