@@ -15,7 +15,7 @@ Buts :
 
 ** Modificateurs sur les touches de repos
 
-Pour une introduction au sujet, voici un article de référence sur le sujet : https://precondition.github.io/home-row-mods
+Pour une introduction au sujet, voici un article de référence : https://precondition.github.io/home-row-mods
 
 Dans cette configuration, voici les correspondances de doigts utilisés :
 - les _auriculaires_ pour la touche *méta*
@@ -36,8 +36,14 @@ Au niveau des pouces, de gauche à droite :
 
 *** Chiffres
 
-Pour l’instant, ce calque (~1~) est activé par les deux touches intérieures des pouces par appui maintenu.
+Ce calque (~1~) est activé par appui maintenu sur la touche droite du pouce gauche.
 
 Sur la ligne de repos, les nombres de 1 à 10. La ligne du bas, les touches de fonction.
 
 Pour la ligne du haut, les trois premières touches permettent d’accéder aux symboles qui ne sont pas disponibles avec la touche ~AltGR~. Et à droite, les deux fonctions ~F11~ et ~F12~.
+
+*** Système et navigation
+
+Ce calque (~2~) est activé par appui maintenu sur la touche gauche du pouce droit.
+
+On retrouve la gestion du Bluetooth, le volume, les flèches, l’échappement et autres fonctions propres à ZMK.
