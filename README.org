@@ -22,3 +22,22 @@ Dans cette configuration, voici les correspondances de doigts utilisés :
 - les _annulaires_ pour la touche *alt*
 - les _majeurs_ pour la touche *majuscule*
 - les _index_ pour la touche *contrôle*
+** Calques
+
+Pour le moment, il y a deux calques.
+
+*** Par défaut
+
+Le calque par défaut (~0~) est standard pour les lettres.
+
+Au niveau des pouces, de gauche à droite :
+- à gauche, ~tabulation~ puis ~retour charriot~
+- à droite, ~espace~ puis ~entrée~ (qui devient ~AltGr~ quand maintenu)
+
+*** Chiffres
+
+Pour l’instant, ce calque (~1~) est activé par les deux touches intérieures des pouces par appui maintenu.
+
+Sur la ligne de repos, les nombres de 1 à 10. La ligne du bas, les touches de fonction.
+
+Pour la ligne du haut, les trois premières touches permettent d’accéder aux symboles qui ne sont pas disponibles avec la touche ~AltGR~. Et à droite, les deux fonctions ~F11~ et ~F12~.
