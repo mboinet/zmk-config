@@ -68,7 +68,7 @@
            HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE,   OUT_TOG)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  vol-    │  mute    │  vol+    │          │   │BT PROF 0 │ BT next  │ BT clear │          │BOOTLOADER|
-         &bootloader &kp K_VOL_DN &kp K_MUTE &kp K_VOL_UP &trans     &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR  &trans   &bootloader
+         &bootloader &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans     &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR  &trans   &bootloader
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
