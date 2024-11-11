@@ -37,7 +37,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp TAB   &lt 1 BSPC    &lt 2 SPACE &ht RALT RET
+                                             &kp SPC   &lt 1 BSPC    &lt 2 TAB  &ht RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
