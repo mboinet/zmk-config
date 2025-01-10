@@ -61,8 +61,8 @@
         navsys_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│          │UNL STUDIO│
-            &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP    &kp PSCRN &kp PAUSE_BREAK &kp SLCK  &trans  &studio_unlock
+        //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│  EQUAL   │UNL STUDIO│
+            &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP    &kp PSCRN &kp PAUSE_BREAK &kp SLCK  &EQUAL  &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │OUTPUT TGL│
            HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE,   OUT_TOG)
