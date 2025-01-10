@@ -40,10 +40,10 @@ Ce calque (~1~) est activé par appui maintenu sur la touche droite du pouce gau
 
 Sur la ligne de repos, les nombres de 1 à 10. La ligne du bas, les touches de fonction.
 
-Pour la ligne du haut, les trois premières touches permettent d’accéder aux symboles qui ne sont pas disponibles avec la touche ~AltGR~. Et à droite, les deux fonctions ~F11~ et ~F12~.
+Sur la droite de la ligne du haut, les deux touches de fonction ~F11~ et ~F12~ qui ne tiennent pas sur la rangée du milieu.
 
 *** Système et navigation
 
 Ce calque (~2~) est activé par appui maintenu sur la touche gauche du pouce droit.
 
-On retrouve la gestion du Bluetooth, le volume, les flèches, l’échappement et autres fonctions propres à ZMK.
+On retrouve la gestion du Bluetooth, le volume, les flèches, la pagination, l’échappement, égal/plus et d’autres fonctions propres à ZMK.
