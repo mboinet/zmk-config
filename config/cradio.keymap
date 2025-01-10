@@ -61,14 +61,14 @@
         navsys_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│ OUT TGL  │UNL STUDIO│
-            &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP    &kp PSCRN &kp PAUSE_BREAK &kp SLCK &out OUT_TOG &studio_unlock
+        //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│          │UNL STUDIO│
+            &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP    &kp PSCRN &kp PAUSE_BREAK &kp SLCK &trans   &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │ EQUAL    │
            HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE,   EQUAL)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│  vol-    │  mute    │  vol+    │          │   │BT PROF 0 │ BT next  │ BT clear │          │BOOTLOADER|
-         &bootloader &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &trans     &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR  &trans   &bootloader
+        //│BOOTLOADER│  vol-    │  mute    │  vol+    │ OUT TGL  │   │BT PROF 0 │ BT next  │ BT clear │          │BOOTLOADER|
+         &bootloader &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &out OUT_TOG &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR  &trans   &bootloader
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
