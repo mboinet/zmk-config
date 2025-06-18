@@ -20,7 +20,7 @@
 
         combo_toggle_ergol {
             timeout-ms = <50>;
-            key-positions = <29 30>; // both inner thumb keys
+            key-positions = <31 32>; // both inner thumb keys
             bindings = <&tog 3>;
         };
     }; // combos
