@@ -15,6 +15,18 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_toggle_ergol {
+            timeout-ms = <50>;
+            key-positions = <29 30>; // both inner thumb keys
+            bindings = <&tog 3>;
+        };
+    }; // combos
+};
+
+/ {
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -57,16 +69,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
     };
-
-    combos {
-        compatible = "zmk,combos";
-
-        combo_toggle_ergol {
-            timeout-ms = <50>;
-            key-positions = <29 30>; // both inner thumb keys
-            bindings = <&tog 3>;
-        };
-    }; // combos
 
     keymap {
         compatible = "zmk,keymap";
