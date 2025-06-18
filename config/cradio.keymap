@@ -21,11 +21,58 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+	// Star key or dead key used to switch to another layer when not shifted
+	dead_key: dead_key {
+            compatible = "zmk,behavior-mod-morph";
+	    #binding-cells = <0>;
+            bindings = <&sl 3>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
+
+    macros {
+        minus_qm: minus_question {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+	dot_col: dot_column {
+	    compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+
+ 	com_sem: comma_semicolon {
+	    compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        combo_toggle_ergol {
+            timeout-ms = <50>;
+            key-positions = <29 30>; // both inner thumb keys
+            bindings = <&tog 3>;
+        };
+    }; // combos
 
     keymap {
         compatible = "zmk,keymap";
-        default_layer {
+
+        &sl {
+             release-after-ms = <5000>;
+        };
+
+        // layer 0 is a classic QWERTY sending default key events
+        default {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
@@ -40,9 +87,10 @@
                                              &kp SPC   &lt 1 BSPC    &lt 2 TAB  &ht RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
-        };
+        }; // default
 
-        num_layer {
+        // layer 1 for numbers and function keys
+        num {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │  F11     │  F12     │
@@ -57,8 +105,10 @@
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
-        };
-        navsys_layer {
+        }; // num
+
+        // layer 2 is for navigation and system
+        navsys {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│  INSERT  │UNL STUDIO│
@@ -73,7 +123,24 @@
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
-        };
+        }; // navsys
 
+	// layer 3 is an Ergo-L layout for a US International layout with dead keys
+        ergol {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  C       │  O       │  P       │  W       │   │  J       │  M       │  D       │ STAR !   │  Y       │
+            &kp Q      &kp C      &kp O      &kp P      &kp W          &kp J      &kp M      &kp D      &dead_key  &kp Y
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  E       │  N       │  F       │   │  L       │  R       │  T       │  I       │  U       │
+            HRML(A,        S,         E,         N)     &kp F          &kp L      HRMR(R,        T,         I,        U)
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  - ?     │  V       │  B       │   │  . :     │  H       │ G        │ , ;      │ K        │
+            &kp Z      &kp X      &minus_qm  &kp V      &kp B          &dot_col   &kp H      &kp G      &com_sem   &kp K
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        }; // ergol
     };
 };
