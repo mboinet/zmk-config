@@ -55,6 +55,12 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+ 	dqt: double_quote {
+	     compatible = "zmk,behavior-macro";
+	     #binding-cells = <0>;
+             bindings = <&macro_tap &kp DQT &kp SPACE>;
+	};
+
         acute: dead_acute_param {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -196,7 +202,7 @@
              &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &kp SQT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     {    │     (    │    )     │    }     │          │   │    \     │    +     │     -    │    /     │     "    │
-            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans        &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH   &kp DQT
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans        &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH     &dqt
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
            &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
