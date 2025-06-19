@@ -80,9 +80,9 @@
             bindings
 	      = <&macro_press &kp LSHFT>
 	      , <&kp N6>
+     	      , <&macro_release &kp LSHFT>
 	      , <&macro_param_1to1>
 	      , <&kp MACRO_PLACEHOLDER>
-	      , <&macro_release &kp LSHFT>
 	      ;
         };
 
