@@ -115,6 +115,20 @@
             bindings = <&kp COMMA>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
+
+	cedil: c_cedil {
+	     compatible = "zmk,behavior-macro";
+	     #binding-cells = <0>;
+             bindings
+		= <&macro_press &kp RALT>
+		, <&kp COMMA>
+     	        , <&macro_release &kp RALT>
+		;
+
+<&macro_tap &kp  &kp SPACE>;
+	};
+
+
     };
 
     keymap {
@@ -215,13 +229,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    â     │    ç     │     œ    │    ô     │          │   │          │    µ     │          │ dead "   │    û     │
-             &circ A   &acute C    &trans     &circ O    &trans         &trans     &trans     &trans    &kp DQT
+             &circ A    &cedil     &trans     &circ O    &trans         &trans     &trans     &trans    &kp DQT    &circ U
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    à     │    é     │    è     │    ê     │          │   │          │          │    î     │    ï     │    ù     │
-            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans    &circ I    &umlaut I   &grave U
+            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans    &circ I    &umlaut I  &grave U
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &trans     &trans     &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans
+             &trans     &trans     &trans     &trans     &trans        &trans      &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
