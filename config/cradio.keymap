@@ -21,7 +21,7 @@
         combo_toggle_ergol {
             timeout-ms = <50>;
             key-positions = <31 32>; // both inner thumb keys
-            bindings = <&tog 3>;
+            bindings = <&tog 1>; // to Ergo-L emulating layout
         };
     }; // combos
 };
@@ -86,12 +86,30 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC   &lt 1 BSPC    &lt 2 TAB  &ht RALT RET
+                                             &kp SPC   &lt 2 BSPC    &lt 3 TAB  &ht RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         }; // default
 
-        // layer 1 for numbers and function keys
+	// layer 1 is an Ergo-L layout for a US International layout with dead keys
+        ergol {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  Q       │  C       │  O       │  P       │  W       │   │  J       │  M       │  D       │ STAR !   │  Y       │
+            &kp Q      &kp C      &kp O      &kp P      &kp W          &kp J      &kp M      &kp D      &dead_key  &kp Y
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  A       │  S       │  E       │  N       │  F       │   │  L       │  R       │  T       │  I       │  U       │
+            HRML(A,        S,         E,         N)     &kp F          &kp L      HRMR(R,        T,         I,        U)
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  Z       │  X       │  - ?     │  V       │  B       │   │  . :     │  H       │ G        │ , ;      │ K        │
+            &kp Z      &kp X      &minus_qm  &kp V      &kp B          &dot_col   &kp H      &kp G      &com_sem   &kp K
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        }; // ergol
+
+        // layer 2 for numbers and function keys
         num {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -109,7 +127,7 @@
             >;
         }; // num
 
-        // layer 2 is for navigation and system
+        // layer 3 is for navigation and system
         navsys {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -127,22 +145,6 @@
             >;
         }; // navsys
 
-	// layer 3 is an Ergo-L layout for a US International layout with dead keys
-        ergol {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  C       │  O       │  P       │  W       │   │  J       │  M       │  D       │ STAR !   │  Y       │
-            &kp Q      &kp C      &kp O      &kp P      &kp W          &kp J      &kp M      &kp D      &dead_key  &kp Y
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  E       │  N       │  F       │   │  L       │  R       │  T       │  I       │  U       │
-            HRML(A,        S,         E,         N)     &kp F          &kp L      HRMR(R,        T,         I,        U)
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  - ?     │  V       │  B       │   │  . :     │  H       │ G        │ , ;      │ K        │
-            &kp Z      &kp X      &minus_qm  &kp V      &kp B          &dot_col   &kp H      &kp G      &com_sem   &kp K
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        }; // ergol
+
     };
 };
