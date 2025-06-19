@@ -180,14 +180,14 @@
         ergol_symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │     &    │          │          │          │
-             &trans     &trans     &trans     &trans     &trans         &trans  &kp AMPERSAND &trans     &trans     &trans
+        //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
+             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &kp SQT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │     (    │    )     │          │          │   │          │    +     │     -    │          │          │
-             &trans    &kp LPAR   &kp RPAR    &trans     &trans         &trans    &kp PLUS  &kp MINUS    &trans     &trans
+        //│     {    │     (    │    )     │    }     │          │   │          │    +     │     -    │    /     │     "    │
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans         &trans    &kp PLUS  &kp MINUS  &kp SLASH   &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
+           &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
