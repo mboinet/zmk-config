@@ -86,6 +86,18 @@
 	      ;
         };
 
+        umlaut: dead_umlaut_param {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+	      = <&macro_press &kp LSHFT>
+	      , <&kp SQT>
+     	      , <&macro_release &kp LSHFT>
+	      , <&macro_param_1to1>
+	      , <&kp MACRO_PLACEHOLDER>
+	      ;
+        };
+
 	dot_col: dot_column {
 	    compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -183,8 +195,8 @@
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
              &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &kp SQT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     {    │     (    │    )     │    }     │          │   │          │    +     │     -    │    /     │     "    │
-            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans         &trans    &kp PLUS  &kp MINUS  &kp SLASH   &kp DQT
+        //│     {    │     (    │    )     │    }     │          │   │    \     │    +     │     -    │    /     │     "    │
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans        &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH   &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
            &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
@@ -198,11 +210,11 @@
         ergol_typo {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│    â     │    ç     │     œ    │    ô     │          │   │          │    µ     │          │          │    û     │
-             &circ A   &acute C    &trans     &circ O    &trans         &trans     &trans     &trans     &trans    &circ U
+        //│    â     │    ç     │     œ    │    ô     │          │   │          │    µ     │          │ dead "   │    û     │
+             &circ A   &acute C    &trans     &circ O    &trans         &trans     &trans     &trans    &kp DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│    à     │    é     │    è     │    ê     │          │   │          │          │    î     │    ï     │    ù     │
-            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans    &circ I     &trans    &grave U
+            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans    &circ I    &umlaut I   &grave U
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
              &trans     &trans     &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans
