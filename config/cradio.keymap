@@ -210,7 +210,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
-             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR &undead SQT  &trans
+             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR &undead SQT &undead GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     {    │     (    │    )     │    }     │     =    │   │    \     │    +     │     -    │    /     │     "    │
             &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH  &undead DQT
