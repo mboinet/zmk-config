@@ -55,18 +55,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
- 	dqt: double_quote {
-	     compatible = "zmk,behavior-macro";
-	     #binding-cells = <0>;
-             bindings = <&macro_tap &kp DQT &kp SPACE>;
-	};
-
-	apos: apostrophe {
-	    compatible = "zmk,behavior-macro";
-	    #binding-cells = <0>;
-            bindings = <&macro_tap &kp APOS &kp SPACE>;
-	};
-
         acute: dead_acute_param {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -74,6 +62,15 @@
 	      = <&kp APOSTROPHE>
 	      , <&macro_param_1to1>
 	      , <&kp MACRO_PLACEHOLDER>;
+        };
+
+        udk: undead_key {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+	      = <&macro_param_1to1>,
+	      , <&kp MACRO_PLACEHOLDER>,
+	      , <$kp SPACE>;
         };
 
         grave: dead_grave_param {
@@ -213,10 +210,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
-             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &apos     &trans
+             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR &undead SQT  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     {    │     (    │    )     │    }     │     =    │   │    \     │    +     │     -    │    /     │     "    │
-            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH     &dqt
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH  &undead DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
            &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
