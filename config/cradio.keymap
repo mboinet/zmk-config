@@ -42,7 +42,7 @@
 	dead_key: dead_key {
             compatible = "zmk,behavior-mod-morph";
 	    #binding-cells = <0>;
-            bindings = <&sl 3>, <&kp EXCL>;
+            bindings = <&sl 5>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -53,6 +53,15 @@
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        acute: dead_acute_param {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+	      = <&kp APOSTROPHE>
+	      , <&macro_param_1to1>
+	      , <&kp MACRO_PLACEHOLDER>;
         };
 
 	dot_col: dot_column {
@@ -145,6 +154,41 @@
             >;
         }; // navsys
 
+        // layer 4 for Ergo-L symbols (with AltGr)
+        ergol_symbors {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        }; // ergol_symbols
 
+        // layer 5 for Ergo-L special letters with dead key
+        ergol_typo {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │  é       │  è       │          │          │   │          │          │          │          │          │
+             &trans    &acute E    &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        }; // ergol_typo
+	
     };
 };
