@@ -45,7 +45,7 @@
             bindings = <&sl 5>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };
+    }; // behaviors
 
     macros {
         minus_qm: minus_question {
@@ -135,7 +135,7 @@
         //│  Z       │  X       │  - ?     │  V       │  B       │   │  . :     │  H       │ G        │ , ;      │ K        │
             &kp Z      &kp X      &minus_qm  &kp V      &kp B          &dot_col   &kp H      &kp G      &com_sem   &kp K
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &trans     &trans         &trans     &lt 4 RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         }; // ergol
@@ -177,14 +177,14 @@
         }; // navsys
 
         // layer 4 for Ergo-L symbols (with AltGr)
-        ergol_symbors {
+        ergol_symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │          │     &    │          │          │          │
+             &trans     &trans     &trans     &trans     &trans         &trans  &kp AMPERSAND &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│          │     (    │    )     │          │          │   │          │    +     │     -    │          │          │
+             &trans    &kp LPAR   &kp RPAR    &trans     &trans         &trans    &kp PLUS  &kp MINUS    &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
              &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
