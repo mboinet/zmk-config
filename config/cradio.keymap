@@ -61,6 +61,12 @@
              bindings = <&macro_tap &kp DQT &kp SPACE>;
 	};
 
+	apos: apostrophe {
+	    compatible = "zmk,behavior-macro";
+	    #binding-cells = <0>;
+            bindings = <&macro_tap &kp APOS &kp SPACE>;
+	};
+
         acute: dead_acute_param {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -207,7 +213,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
-             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &kp SQT    &trans
+             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &apos     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     {    │     (    │    )     │    }     │     =    │   │    \     │    +     │     -    │    /     │     "    │
             &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH     &dqt
