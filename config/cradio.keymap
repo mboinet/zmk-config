@@ -213,8 +213,8 @@
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
              &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR   &kp SQT    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│     {    │     (    │    )     │    }     │          │   │    \     │    +     │     -    │    /     │     "    │
-            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC    &trans        &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH     &dqt
+        //│     {    │     (    │    )     │    }     │     =    │   │    \     │    +     │     -    │    /     │     "    │
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH     &dqt
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
            &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
