@@ -211,10 +211,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    <     │     >    │          │          │   │    @     │     &    │    *     │    '     │    `     │
-             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR &undead SQT &undead GRAVE
+             &trans     &kp LT     &kp GT     &trans     &trans        &kp AT   &kp AMPERSAND &kp STAR  &udk SQT   &udk GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     {    │     (    │    )     │    }     │     =    │   │    \     │    +     │     -    │    /     │     "    │
-            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH  &undead DQT
+            &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp EQUAL      &kp BSLH   &kp PLUS  &kp MINUS  &kp SLASH   &udk DQT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│     ~    │    [     │    ]     │     _    │    #     │   │    |     │          │          │          │          │
            &kp TILDE   &kp LBKT   &kp RBKT  &kp UNDER    &kp HASH      &kp PIPE    &trans     &trans     &trans     &trans
