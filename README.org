@@ -36,7 +36,7 @@ Au niveau des pouces, de gauche à droite :
 
 *** Chiffres
 
-Ce calque (~1~) est activé par appui maintenu sur la touche droite du pouce gauche.
+Ce calque (~2~) est activé par appui maintenu sur la touche droite du pouce gauche.
 
 Sur la ligne de repos, les nombres de 1 à 10. La ligne du bas, les touches de fonction.
 
@@ -44,12 +44,12 @@ Sur la droite de la ligne du haut, les deux touches de fonction ~F11~ et ~F12~ q
 
 *** Système et navigation
 
-Ce calque (~2~) est activé par appui maintenu sur la touche gauche du pouce droit.
+Ce calque (~3~) est activé par appui maintenu sur la touche gauche du pouce droit.
 
 On retrouve la gestion du Bluetooth, le volume, les flèches, la pagination, l’échappement, égal/plus et d’autres fonctions propres à ZMK.
 
 *** Émulation Ergo‑L
 
-Les calques ~2~ et ~3~ (pour les symboles) : on peut y passer en actionnant en même temps les deux touches de pouce intérieures.
+Les calques ~1~, ~4~ (pour les symboles) et ~5~ (pour la typographie) : on peut y passer en actionnant en même temps les deux touches de pouce intérieures.
 
 Inspiration : [[https://github.com/paul-ohl/zmk-config-hummingbird/blob/main/config/hummingbird.keymap]]
