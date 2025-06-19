@@ -124,12 +124,8 @@
 		, <&kp COMMA>
      	        , <&macro_release &kp RALT>
 		;
-
-<&macro_tap &kp  &kp SPACE>;
 	};
-
-
-    };
+    }; // macros
 
     keymap {
         compatible = "zmk,keymap";
