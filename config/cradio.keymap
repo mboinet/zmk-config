@@ -199,13 +199,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│    â     │    ç     │     œ    │    ô     │          │   │          │    µ     │          │          │    û     │
-             &circ A    &trans     &trans     &circ O    &trans         &trans     &trans     &trans     &trans     &trans
+             &circ A   &acute C    &trans     &circ O    &trans         &trans     &trans     &trans     &trans    &circ U
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│    à     │    é     │    è     │    ê     │          │   │          │          │          │          │          │
-            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans     &trans     &trans     &trans
+        //│    à     │    é     │    è     │    ê     │          │   │          │          │    î     │    ï     │    ù     │
+            &grave A   &acute E   &grave E    &circ E    &trans         &trans     &trans    &circ I     &trans    &grave U
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+             &trans     &trans     &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
