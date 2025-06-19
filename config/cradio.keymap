@@ -64,6 +64,15 @@
 	      , <&kp MACRO_PLACEHOLDER>;
         };
 
+        grave: dead_grave_param {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+	      = <&kp GRAVE>
+	      , <&macro_param_1to1>
+	      , <&kp MACRO_PLACEHOLDER>;
+        };
+
 	dot_col: dot_column {
 	    compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -176,11 +185,11 @@
         ergol_typo {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
+        //│    â     │    ç     │     œ    │    ô     │          │   │          │          │          │          │          │
              &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  é       │  è       │          │          │   │          │          │          │          │          │
-             &trans    &acute E    &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
+        //│    à     │    é     │    è     │          │          │   │          │          │          │          │          │
+            &grave A   &acute E    &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
              &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
