@@ -10,6 +10,11 @@
 #define HRML(k1,k2,k3,k4) &hml LGUI  k1 &hml LALT  k2 &hml LSHFT k3 &hml LCTRL k4
 #define HRMR(k1,k2,k3,k4) &hmr RCTRL k1 &hmr RSHFT k2 &hmr LALT  k3 &hml RGUI  k4
 
+// Layer defines https://zmk.dev/docs/keymaps/behaviors/layers#defines-to-refer-to-layers
+#define DEFAULT 0
+#define NUM 1
+#define SYS 2
+
 / {
     behaviors {
         ht: hold_tap {
@@ -57,7 +62,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC   &lt 1 BSPC    &lt 2 TAB  &ht RALT RET
+                                             &kp SPC  &lt NUM BSPC   &lt SYS TAB &ht RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
