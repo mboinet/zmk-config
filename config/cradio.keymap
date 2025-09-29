@@ -51,7 +51,7 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-	    display-name = "Default layer";
+	    display-name = "Default";
 	    bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
@@ -69,7 +69,7 @@
         };
 
         num_layer {
-	    display-name = "Numbers & functions layer";
+	    display-name = "Numbers & functions";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │  F11     │  F12     │
@@ -86,7 +86,7 @@
             >;
         };
         navsys_layer {
-            display-name = "System and navigation layer";
+            display-name = "Navigation & system";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│  INSERT  │UNL STUDIO│
