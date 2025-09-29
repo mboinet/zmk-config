@@ -15,10 +15,8 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
 	hml: home_row_mod_left {
