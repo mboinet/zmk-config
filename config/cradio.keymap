@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LGUI  k1 &ht LALT  k2 &ht LSHFT k3 &ht LCTRL k4
-#define HRMR(k1,k2,k3,k4) &ht RCTRL k1 &ht RSHFT k2 &ht LALT  k3 &ht RGUI  k4
+#define HRML(k1,k2,k3,k4) &hml LGUI  k1 &hml LALT  k2 &hml LSHFT k3 &hml LCTRL k4
+#define HRMR(k1,k2,k3,k4) &hmr RCTRL k1 &hmr RSHFT k2 &hmr LALT  k3 &hml RGUI  k4
 
 / {
     behaviors {
@@ -20,6 +20,28 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
+        };
+	hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
         };
     };
 
