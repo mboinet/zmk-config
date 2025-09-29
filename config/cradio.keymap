@@ -63,7 +63,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPC  &lt NUM BSPC   &lt SYS TAB &ht RALT RET
+                                           &kp SPACE  &lt NUM BSPC   &lt SYS TAB &ht RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
