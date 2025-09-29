@@ -14,7 +14,7 @@
 #define DEFAULT 0
 #define NUM 1
 #define SYS 2
-
+t
 / {
     behaviors {
         ht: hold_tap {
@@ -51,7 +51,8 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-            bindings = <
+	    display-name = "Default layer";
+	    bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
@@ -68,6 +69,7 @@
         };
 
         num_layer {
+	    display-name = "Numbers & functions layer"
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │  F11     │  F12     │
@@ -84,6 +86,7 @@
             >;
         };
         navsys_layer {
+            display-name = "System and navigation layer"
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │SCROLL LCK│  INSERT  │UNL STUDIO│
