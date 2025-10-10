@@ -28,7 +28,7 @@ Voici les calques ou layers définis dans cette configuration
 
 *** Par défaut
 
-Le calque par défaut (~0~) est standard pour les lettres.
+Le calque par défaut (~Default~) est standard pour les lettres.
 
 Au niveau des pouces, de gauche à droite :
 - à gauche, ~espace~ puis ~retour charriot~
@@ -36,7 +36,7 @@ Au niveau des pouces, de gauche à droite :
 
 *** Chiffres
 
-Ce calque (~1~) est activé par appui maintenu sur la touche droite du pouce gauche.
+Ce calque (définition ~NUM~ ou nommé ~num_layer~) est activé par appui maintenu sur la touche droite du pouce gauche.
 
 Sur la ligne de repos, les nombres de 1 à 10. La ligne du bas, les touches de fonction.
 
@@ -44,6 +44,6 @@ Sur la droite de la ligne du haut, les deux touches de fonction ~F11~ et ~F12~ q
 
 *** Système et navigation
 
-Ce calque (~2~) est activé par appui maintenu sur la touche gauche du pouce droit.
+Ce calque (définition ~SYS~ ou nommé ~navsys_layer~) est activé par appui maintenu sur la touche gauche du pouce droit.
 
 On retrouve la gestion du Bluetooth, le volume, les flèches, la pagination, l’échappement, égal/plus et d’autres fonctions propres à ZMK.
