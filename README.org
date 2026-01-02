@@ -19,9 +19,9 @@ Pour une introduction au sujet, voici un article de référence : https://prec
 
 Dans cette configuration, voici les correspondances de doigts utilisés :
 - les _auriculaires_ pour la touche *méta*
-- les _annulaires_ pour la touche *alt*
-- les _majeurs_ pour la touche *majuscule*
+- les _majeurs_ pour la touche *alt*
 - les _index_ pour la touche *contrôle*
+
 ** Calques
 
 Voici les calques ou layers définis dans cette configuration
@@ -31,8 +31,8 @@ Voici les calques ou layers définis dans cette configuration
 Le calque par défaut (~Default~) est standard pour les lettres.
 
 Au niveau des pouces, de gauche à droite :
-- à gauche, ~espace~ puis ~retour charriot~
-- à droite, ~tab~ puis ~entrée~ (qui devient ~AltGr~ quand maintenu)
+- à gauche, ~tab~ (qui devient ~Majuscule~ quand maintenu) puis ~retour charriot~
+- à droite, ~espace~ puis ~entrée~ (qui devient ~AltGr~ quand maintenu)
 
 *** Chiffres
 

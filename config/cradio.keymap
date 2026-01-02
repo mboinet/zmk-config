@@ -7,8 +7,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &hml LGUI  k1 &hml LALT  k2 &hml LSHFT k3 &hml LCTRL k4
-#define HRMR(k1,k2,k3,k4) &hmr RCTRL k1 &hmr RSHFT k2 &hmr LALT  k3 &hml RGUI  k4
+#define HRML(k1,k2,k3) &hml LGUI  k1 &hml LALT k2 &hml LCTRL k3
+#define HRMR(k1,k2,k3) &hmr RCTRL k1 &hmr LALT k2 &hml RGUI  k3
 
 // Layer defines https://zmk.dev/docs/keymaps/behaviors/layers#defines-to-refer-to-layers
 #define DEFAULT 0
@@ -17,12 +17,13 @@
 
 / {
     behaviors {
-        ht: hold_tap {
+        mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <180>;
             bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
         };
 	hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -58,12 +59,12 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  :       │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,      SEMI)
+            &kp A      HRML(S,        D,         F)     &kp G          &kp H      HRMR(J,        K,         L)     &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &kp SPACE  &lt NUM BSPC   &lt SYS TAB &ht RALT RET
+                                        &mt LSHIFT TAB &lt NUM BSPC   &lt SYS SPACE &mt RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -76,7 +77,7 @@
              &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &kp F11    &kp F12
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  1       │  2       │  3       │  4       │  5       │   │  6       │  7       │  8       │  9       │  0       │
-            HRML(N1,     N2,        N3,        N4)      &kp N5         &kp N6     HRMR(N7,     N8,        N9,       N0)
+            &kp N1     HRML(N2,      N3,        N4)      &kp N5         &kp N6    HRMR(N7,     N8,        N9,       &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  F1      │  F2      │  F3      │  F4      │  F5      │   │  F6      │  F7      │  F8      │  F9      │  F10     │
             &kp F1     &kp F2     &kp F3     &kp F4     &kp F5         &kp F6     &kp F7     &kp F8     &kp F9     &kp F10
@@ -92,8 +93,8 @@
         //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │ INC BRIG │ DEC BRIG │UNL STUDIO│
             &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP   &kp PSCRN &kp PAUSE_BREAK &kp C_BRI_DN &kp C_BRI_UP &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │ EQUAL    │
-           HRML(CAPS,   LEFT,      DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE,   EQUAL)
+        //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │     =    │
+            &kp CAPS  HRML(LEFT,   DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE)  &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  vol-    │  mute    │  vol+    │  INSERT  │   │BT PROF 0 │ BT next  │ BT clear │ USB tog  │BOOTLOADER|
          &bootloader &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &kp INS   &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR &out OUT_TOG &bootloader
