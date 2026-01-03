@@ -64,7 +64,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &mt LSHIFT TAB &lt NUM BSPC   &lt SYS SPACE &mt RALT RET
+                                        &mt LSHIFT ESC &lt NUM BSPC   &lt SYS SPACE &mt RALT RET
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -90,11 +90,11 @@
             display-name = "Navigation & system";
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESCAPE  │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │ INC BRIG │ DEC BRIG │UNL STUDIO│
-            &kp ESC    &kp HOME    &kp UP     &kp END   &kp PG_UP   &kp PSCRN &kp PAUSE_BREAK &kp C_BRI_DN &kp C_BRI_UP &studio_unlock
+        //│ CAPS LCK │  home    │  up      │  end     │ page up  │   │PRINT SCRN│  PAUSE   │ INC BRIG │ DEC BRIG │UNL STUDIO│
+            &kp CAPS   &kp HOME    &kp UP     &kp END   &kp PG_UP   &kp PSCRN &kp PAUSE_BREAK &kp C_BRI_DN &kp C_BRI_UP &studio_unlock
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS LCK │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │     =    │
-            &kp CAPS  HRML(LEFT,   DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE)  &kp EQUAL
+        //│    TAB   │  left    │  down    │  right   │ page dn  │   │ DELETE   │   CUT    │  COPY    │  PASTE   │     =    │
+            &kp TAB   HRML(LEFT,   DOWN,      RIGHT)    &kp PG_DN      &kp DEL    HRMR(K_CUT, K_COPY,    K_PASTE)  &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  vol-    │  mute    │  vol+    │  INSERT  │   │BT PROF 0 │ BT next  │ BT clear │ USB tog  │BOOTLOADER|
          &bootloader &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &kp INS   &bt BT_SEL 0 &bt BT_NXT &bt BT_CLR &out OUT_TOG &bootloader

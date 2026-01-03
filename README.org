@@ -31,7 +31,7 @@ Voici les calques ou layers définis dans cette configuration
 Le calque par défaut (~Default~) est standard pour les lettres.
 
 Au niveau des pouces, de gauche à droite :
-- à gauche, ~tab~ (qui devient ~Majuscule~ quand maintenu) puis ~retour charriot~
+- à gauche, ~échap~ (qui devient ~Majuscule~ quand maintenu) puis ~retour charriot~
 - à droite, ~espace~ puis ~entrée~ (qui devient ~AltGr~ quand maintenu)
 
 *** Chiffres
